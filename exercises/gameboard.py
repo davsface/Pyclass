@@ -9,6 +9,6 @@ board = [
     [0, 0, 0, 0, 0, 0, 0, 0],
 ]
 
-board[0][1] = 'c'
+board[0][1] = 'x'
 
 print(board)
