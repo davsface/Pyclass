@@ -1,13 +1,21 @@
-numerator = 10**309
-denominator = int(input("enter a number for the denominator: "))
+def a():
+  print("a before")
+  x = 10/0
+  print("a after")
 
-try:
-  result = float(numerator / denominator)
-except ZeroDivisionError:
-  print("Division by zero is undefined.")
-except OverflowError:
-  print("Too big!")
-else:
-  print("Result = ", result)
-finally:
-  print("All done here.")
+def b():
+  print("b before")
+  a()
+  print("b after")
+
+def c():
+  print("c before")
+  b()
+  print("c after")
+
+def d():
+  print("d before")
+  c()
+  print("d after")
+
+d()
